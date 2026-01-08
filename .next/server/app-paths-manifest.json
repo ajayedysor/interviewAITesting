@@ -1,0 +1,6 @@
+{
+  "/api/interviews/update-status/route": "app/api/interviews/update-status/route.js",
+  "/dashboard/page": "app/dashboard/page.js",
+  "/page": "app/page.js",
+  "/meeting/[meetingId]/page": "app/meeting/[meetingId]/page.js"
+}

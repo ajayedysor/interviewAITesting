@@ -1,0 +1,62 @@
+{
+  "functions": {
+    "app/api/upload-photo/route.ts": {
+      "maxDuration": 30,
+      "memory": 1024
+    },
+    "app/api/interviews/update-status/route.ts": {
+      "maxDuration": 10,
+      "memory": 512
+    },
+    "app/api/vapi/config/route.ts": {
+      "maxDuration": 5,
+      "memory": 256
+    },
+    "app/api/interviews/route.ts": {
+      "maxDuration": 10,
+      "memory": 512
+    },
+    "app/api/user/route.ts": {
+      "maxDuration": 10,
+      "memory": 512
+    }
+  },
+  "headers": [
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
+        }
+      ]
+    },
+    {
+      "source": "/api/vapi/config",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=300, stale-while-revalidate=600"
+        }
+      ]
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "/api/$1"
+    }
+  ]
+} 
