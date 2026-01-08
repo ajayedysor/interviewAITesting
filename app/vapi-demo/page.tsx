@@ -1,6 +1,7 @@
-/*
 "use client"
 
+// PRESERVED VAPI CODE (Disabled)
+/*
 import { useState, useEffect } from "react"
 
 export default function VapiDemoPage() {
@@ -14,3 +15,7 @@ export default function VapiDemoPage() {
   )
 }
 */
+
+export default function VapiDemoPage() {
+  return null;
+}

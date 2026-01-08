@@ -1,6 +1,7 @@
-/*
 "use client"
 
+// PRESERVED VAPI CODE (Disabled)
+/*
 import type React from "react"
 
 import { useVapi } from "@/hooks/use-vapi"
@@ -54,3 +55,7 @@ export function VapiWidget() {
   )
 }
 */
+
+export function VapiWidget() {
+  return null;
+}

@@ -1,6 +1,7 @@
-/*
-import { NextResponse } from "next/server"
+import { NextResponse } from "next/server";
 
+// PRESERVED VAPI CODE (Disabled)
+/*
 export async function GET() {
   const publicKey = process.env.VAPI_PUBLIC_KEY
   const assistantId = process.env.VAPI_ASSISTANT_ID
@@ -17,3 +18,7 @@ export async function GET() {
   })
 }
 */
+
+export async function GET() {
+  return NextResponse.json({ message: "Vapi is disabled" }, { status: 404 });
+}
